@@ -1,6 +1,8 @@
 ---
-- name: Exercise #1
-  hosts: localhost
+  - name: Print env variable
+    shell: echo $PATH
+    register: print_result
 
-  roles:
-    - print
+  - name: print message
+    debug:
+      msg: "{{ print_result.stdout_lines }}"
