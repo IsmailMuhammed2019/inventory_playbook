@@ -6,7 +6,7 @@
 - name: print message
   debug:
     msg: '{{ print_result.stdout_lines }}'
----
+
 - name: Exercise #1
   hosts: localhost
 
